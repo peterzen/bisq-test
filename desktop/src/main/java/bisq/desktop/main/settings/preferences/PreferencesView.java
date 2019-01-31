@@ -105,7 +105,7 @@ public class PreferencesView extends ActivatableViewAndModel<GridPane, Preferenc
     private ComboBox<TradeCurrency> preferredTradeCurrencyComboBox;
     private ComboBox<BaseCurrencyNetwork> selectBaseCurrencyNetworkComboBox;
 
-    private ToggleButton showOwnOffersInOfferBook, useAnimations, sortMarketCurrenciesNumerically, avoidStandbyMode,
+    private ToggleButton showOwnOffersInOfferBook, useAnimations, useDarkTheme, sortMarketCurrenciesNumerically, avoidStandbyMode,
             useCustomFee;
     private int gridRow = 0;
     private InputTextField transactionFeeInputTextField, ignoreTradersListInputTextField, referralIdInputTextField, rpcUserTextField;
@@ -554,6 +554,7 @@ public class PreferencesView extends ActivatableViewAndModel<GridPane, Preferenc
 //        showOwnOffersInOfferBook = addLabelCheckBox(root, gridRow, Res.get("setting.preferences.showOwnOffers"), Layout.FIRST_ROW_AND_GROUP_DISTANCE);
         showOwnOffersInOfferBook = addSlideToggleButton(root, gridRow, Res.get("setting.preferences.showOwnOffers"), Layout.FIRST_ROW_AND_GROUP_DISTANCE);
         useAnimations = addSlideToggleButton(root, ++gridRow, Res.get("setting.preferences.useAnimations"));
+        useDarkTheme = addSlideToggleButton(root, ++gridRow, Res.get("setting.preferences.useDarkTheme"));
         // useStickyMarketPriceCheckBox = addLabelCheckBox(root, ++gridRow, "Use sticky market price:", "").second;
         sortMarketCurrenciesNumerically = addSlideToggleButton(root, ++gridRow, Res.get("setting.preferences.sortWithNumOffers"));
         resetDontShowAgainButton = addButton(root, ++gridRow, Res.get("setting.preferences.resetAllFlags"), 0);
@@ -755,6 +756,9 @@ public class PreferencesView extends ActivatableViewAndModel<GridPane, Preferenc
         useAnimations.setSelected(preferences.isUseAnimations());
         useAnimations.setOnAction(e -> preferences.setUseAnimations(useAnimations.isSelected()));
 
+        useDarkTheme.setSelected(preferences.isUseDarkTheme());
+        useDarkTheme.setOnAction(e -> preferences.setUseDarkTheme(useDarkTheme.isSelected()));
+
         // useStickyMarketPriceCheckBox.setSelected(preferences.isUseStickyMarketPrice());
         // useStickyMarketPriceCheckBox.setOnAction(e -> preferences.setUseStickyMarketPrice(useStickyMarketPriceCheckBox.isSelected()));
 
@@ -868,6 +872,7 @@ public class PreferencesView extends ActivatableViewAndModel<GridPane, Preferenc
 
     private void deactivateDisplayPreferences() {
         useAnimations.setOnAction(null);
+        useDarkTheme.setOnAction(null);
         // useStickyMarketPriceCheckBox.setOnAction(null);
         sortMarketCurrenciesNumerically.setOnAction(null);
         showOwnOffersInOfferBook.setOnAction(null);

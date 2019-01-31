@@ -92,6 +92,7 @@ import static bisq.desktop.util.Layout.INITIAL_WINDOW_WIDTH;
 import static bisq.desktop.util.Layout.MIN_WINDOW_HEIGHT;
 import static bisq.desktop.util.Layout.MIN_WINDOW_WIDTH;
 
+
 @Slf4j
 public class BisqApp extends Application implements UncaughtExceptionHandler {
     private static final long LOG_MEMORY_PERIOD_MIN = 10;
@@ -219,11 +220,14 @@ public class BisqApp extends Application implements UncaughtExceptionHandler {
                 maxWindowBounds.height < INITIAL_WINDOW_HEIGHT ?
                         (maxWindowBounds.height < MIN_WINDOW_HEIGHT ? MIN_WINDOW_HEIGHT : maxWindowBounds.height) :
                         INITIAL_WINDOW_HEIGHT);
-        scene.getStylesheets().setAll(
-                "/bisq/desktop/bisq.css",
-                "/bisq/desktop/images.css",
-                "/bisq/desktop/CandleStickChart.css");
+
         addSceneKeyEventHandler(scene, injector);
+
+        loadSceneStyles(scene, injector);
+        injector.getInstance(Preferences.class).getUseDarkThemeProperty().addListener((ov) -> {
+            loadSceneStyles(scene, injector);
+        });
+
         return scene;
     }
 
@@ -313,10 +317,38 @@ public class BisqApp extends Application implements UncaughtExceptionHandler {
                         showFPSWindow(scene);
                     } else if (Utilities.isAltOrCtrlPressed(KeyCode.Z, keyEvent)) {
                         showDebugWindow(scene, injector);
+                    } else if (Utilities.isAltOrCtrlPressed(KeyCode.D, keyEvent)) {
+                        toggleDarkTheme(scene, injector);
                     }
                 }
             }
         });
+    }
+
+    private void toggleDarkTheme(Scene scene, Injector injector) {
+        boolean useDarkTheme = ! injector.getInstance(Preferences.class).isUseDarkTheme();
+        injector.getInstance(Preferences.class).setUseDarkTheme(useDarkTheme);
+        loadSceneStyles(scene, injector);
+    }
+
+    private void loadSceneStyles(Scene scene, Injector injector) {
+        Boolean useDarkTheme = injector.getInstance(Preferences.class).isUseDarkTheme();
+        String themeCss = useDarkTheme ? "theme-dark.css" : "theme-light.css";
+        String cssPath = "/bisq/desktop/";
+
+//        String cssBaseDir = "/home/peter/Work/bisq/bisq/desktop/src/main/java/bisq/desktop/styles/";
+//
+//        scene.getStylesheets().setAll(
+//                "file://" + cssBaseDir + themeCss,
+//                "file://" + cssBaseDir + "bisq.css",
+//                "file://" + cssBaseDir + "images.css",
+//                "file://" + cssBaseDir + "CandleStickChart.css");
+
+        scene.getStylesheets().setAll(
+                cssPath + themeCss,
+                cssPath + "bisq.css",
+                cssPath + "images.css",
+                cssPath + "CandleStickChart.css");
     }
 
     private void shutDownByUser() {

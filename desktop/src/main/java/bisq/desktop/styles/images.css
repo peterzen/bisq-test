@@ -1,0 +1,367 @@
+/* splash screen */
+/*noinspection CssUnknownTarget*/
+/* line 4, images.scss */
+#image-splash-logo {
+  -fx-image: url("../../images/logo_splash.png");
+}
+
+/* shared*/
+/* line 9, images.scss */
+#image-info {
+  -fx-image: url("../../images/info.png");
+}
+
+/* line 13, images.scss */
+#light_close {
+  -fx-image: url("../../images/light_close.png");
+}
+
+/* line 17, images.scss */
+#image-alert-round {
+  -fx-image: url("../../images/alert_round.png");
+}
+
+/* line 21, images.scss */
+#image-green_circle {
+  -fx-image: url("../../images/green_circle.png");
+}
+
+/* line 25, images.scss */
+#image-blue_circle {
+  -fx-image: url("../../images/blue_circle.png");
+}
+
+/* line 29, images.scss */
+#image-remove {
+  -fx-image: url("../../images/remove.png");
+}
+
+/* line 33, images.scss */
+#image-buy-white {
+  -fx-image: url("../../images/buy_white.png");
+}
+
+/* line 37, images.scss */
+#image-buy-green {
+  -fx-image: url("../../images/buy_green.png");
+}
+
+/* line 41, images.scss */
+#image-sell-white {
+  -fx-image: url("../../images/sell_white.png");
+}
+
+/* line 45, images.scss */
+#image-sell-red {
+  -fx-image: url("../../images/sell_red.png");
+}
+
+/* line 49, images.scss */
+#image-expand {
+  -fx-image: url("../../images/expand.png");
+}
+
+/* line 53, images.scss */
+#image-collapse {
+  -fx-image: url("../../images/collapse.png");
+}
+
+/* navigation buttons */
+/* line 58, images.scss */
+#image-nav-market {
+  -fx-image: url("../../images/nav/market.png");
+}
+
+/* line 62, images.scss */
+#image-nav-market-active {
+  -fx-image: url("../../images/nav/market_active.png");
+}
+
+/* line 66, images.scss */
+#image-nav-buyoffer {
+  -fx-image: url("../../images/nav/buyoffer.png");
+}
+
+/* line 70, images.scss */
+#image-nav-buyoffer-active {
+  -fx-image: url("../../images/nav/buyoffer_active.png");
+}
+
+/* line 74, images.scss */
+#image-nav-selloffer {
+  -fx-image: url("../../images/nav/selloffer.png");
+}
+
+/* line 78, images.scss */
+#image-nav-selloffer-active {
+  -fx-image: url("../../images/nav/selloffer_active.png");
+}
+
+/* line 82, images.scss */
+#image-nav-portfolio {
+  -fx-image: url("../../images/nav/portfolio.png");
+}
+
+/* line 86, images.scss */
+#image-nav-portfolio-active {
+  -fx-image: url("../../images/nav/portfolio_active.png");
+}
+
+/* line 90, images.scss */
+#image-nav-funds {
+  -fx-image: url("../../images/nav/funds.png");
+}
+
+/* line 94, images.scss */
+#image-nav-funds-active {
+  -fx-image: url("../../images/nav/funds_active.png");
+}
+
+/* line 98, images.scss */
+#image-nav-disputes {
+  -fx-image: url("../../images/nav/disputes.png");
+}
+
+/* line 102, images.scss */
+#image-nav-disputes-active {
+  -fx-image: url("../../images/nav/disputes_active.png");
+}
+
+/* line 106, images.scss */
+#image-nav-settings {
+  -fx-image: url("../../images/nav/settings.png");
+}
+
+/* line 110, images.scss */
+#image-nav-settings-active {
+  -fx-image: url("../../images/nav/settings_active.png");
+}
+
+/* line 114, images.scss */
+#image-nav-account {
+  -fx-image: url("../../images/nav/account.png");
+}
+
+/* line 118, images.scss */
+#image-nav-account-active {
+  -fx-image: url("../../images/nav/account_active.png");
+}
+
+/* line 122, images.scss */
+#image-nav-dao {
+  -fx-image: url("../../images/nav/dao.png");
+}
+
+/* line 126, images.scss */
+#image-nav-dao-active {
+  -fx-image: url("../../images/nav/dao_active.png");
+}
+
+/* account*/
+/* line 131, images.scss */
+#image-tick {
+  -fx-image: url("../../images/tick.png");
+}
+
+/* line 135, images.scss */
+#image-arrow-blue {
+  -fx-image: url("../../images/arrow_blue.png");
+}
+
+/* line 139, images.scss */
+#image-arrow-grey {
+  -fx-image: url("../../images/arrow_grey.png");
+}
+
+/* connection state*/
+/* line 144, images.scss */
+#image-connection-tor {
+  -fx-image: url("../../images/connection/tor.png");
+}
+
+/* line 148, images.scss */
+#image-connection-direct {
+  -fx-image: url("../../images/connection/direct.png");
+}
+
+/* line 152, images.scss */
+#image-connection-nat {
+  -fx-image: url("../../images/connection/nat.png");
+}
+
+/* line 156, images.scss */
+#image-connection-relay {
+  -fx-image: url("../../images/connection/relay.png");
+}
+
+/* line 160, images.scss */
+#image-connection-synced {
+  -fx-image: url("../../images/connection/synced.png");
+}
+
+/* software update*/
+/* line 166, images.scss */
+#image-update-in-progress {
+  -fx-image: url("../../images/update/update_in_progress.png");
+}
+
+/* line 170, images.scss */
+#image-update-up-to-date {
+  -fx-image: url("../../images/update/update_up_to_date.png");
+}
+
+/* line 174, images.scss */
+#image-update-available {
+  -fx-image: url("../../images/update/update_available.png");
+}
+
+/* line 178, images.scss */
+#image-update-failed {
+  -fx-image: url("../../images/update/update_failed.png");
+}
+
+/* offer state */
+/* line 183, images.scss */
+#image-offer_state_unknown {
+  -fx-image: url("../../images/offer/offer_state_unknown.png");
+}
+
+/* line 187, images.scss */
+#image-offer_state_available {
+  -fx-image: url("../../images/offer/offer_state_available.png");
+}
+
+/* line 191, images.scss */
+#image-offer_state_not_available {
+  -fx-image: url("../../images/offer/offer_state_not_available.png");
+}
+
+/* line 195, images.scss */
+#image-attachment {
+  -fx-image: url("../../images/attachment.png");
+}
+
+/* line 199, images.scss */
+#bubble_arrow_grey_left {
+  -fx-image: url("../../images/bubble_arrow_grey_left.png");
+}
+
+/* line 203, images.scss */
+#bubble_arrow_blue_left {
+  -fx-image: url("../../images/bubble_arrow_blue_left.png");
+}
+
+/* line 207, images.scss */
+#bubble_arrow_grey_right {
+  -fx-image: url("../../images/bubble_arrow_grey_right.png");
+}
+
+/* line 211, images.scss */
+#bubble_arrow_blue_right {
+  -fx-image: url("../../images/bubble_arrow_blue_right.png");
+}
+
+/* line 215, images.scss */
+#link {
+  -fx-image: url("../../images/link.png");
+}
+
+/* line 219, images.scss */
+#invert {
+  -fx-image: url("../../images/invert.png");
+}
+
+/* line 223, images.scss */
+#avatar_1 {
+  -fx-image: url("../../images/avatars/avatar_1.png");
+}
+
+/* line 227, images.scss */
+#avatar_2 {
+  -fx-image: url("../../images/avatars/avatar_2.png");
+}
+
+/* line 231, images.scss */
+#avatar_3 {
+  -fx-image: url("../../images/avatars/avatar_3.png");
+}
+
+/* line 235, images.scss */
+#avatar_4 {
+  -fx-image: url("../../images/avatars/avatar_4.png");
+}
+
+/* line 239, images.scss */
+#avatar_5 {
+  -fx-image: url("../../images/avatars/avatar_5.png");
+}
+
+/* line 243, images.scss */
+#avatar_6 {
+  -fx-image: url("../../images/avatars/avatar_6.png");
+}
+
+/* line 247, images.scss */
+#avatar_7 {
+  -fx-image: url("../../images/avatars/avatar_7.png");
+}
+
+/* line 251, images.scss */
+#avatar_8 {
+  -fx-image: url("../../images/avatars/avatar_8.png");
+}
+
+/* line 255, images.scss */
+#avatar_9 {
+  -fx-image: url("../../images/avatars/avatar_9.png");
+}
+
+/* line 259, images.scss */
+#avatar_10 {
+  -fx-image: url("../../images/avatars/avatar_10.png");
+}
+
+/* line 263, images.scss */
+#avatar_11 {
+  -fx-image: url("../../images/avatars/avatar_11.png");
+}
+
+/* line 267, images.scss */
+#avatar_12 {
+  -fx-image: url("../../images/avatars/avatar_12.png");
+}
+
+/* line 271, images.scss */
+#avatar_13 {
+  -fx-image: url("../../images/avatars/avatar_13.png");
+}
+
+/* line 275, images.scss */
+#avatar_14 {
+  -fx-image: url("../../images/avatars/avatar_14.png");
+}
+
+/* line 279, images.scss */
+#avatar_15 {
+  -fx-image: url("../../images/avatars/avatar_15.png");
+}
+
+/* line 283, images.scss */
+#poloniex {
+  -fx-image: url("../../images/poloniex.png");
+}
+
+/* line 287, images.scss */
+#btcaverage {
+  -fx-image: url("../../images/btcaverage.png");
+}
+
+/* line 291, images.scss */
+#accepted {
+  -fx-image: url("../../images/accepted.png");
+}
+
+/* line 295, images.scss */
+#rejected {
+  -fx-image: url("../../images/rejected.png");
+}

@@ -1292,6 +1292,7 @@ message PreferencesPayload {
     string rpc_user = 47;
     string rpc_pw = 48;
     string take_offer_selected_payment_account_id = 49;
+    bool use_dark_theme = 50;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////

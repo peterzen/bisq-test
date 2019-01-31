@@ -115,6 +115,8 @@ public final class Preferences implements PersistedDataHost, BridgeAddressProvid
     @Getter
     private final BooleanProperty useAnimationsProperty = new SimpleBooleanProperty(prefPayload.isUseAnimations());
     @Getter
+    private final BooleanProperty useDarkThemeProperty = new SimpleBooleanProperty(prefPayload.isUseDarkTheme());
+    @Getter
     private final BooleanProperty useCustomWithdrawalTxFeeProperty = new SimpleBooleanProperty(prefPayload.isUseCustomWithdrawalTxFee());
     @Getter
     private final LongProperty withdrawalTxFeeInBytesProperty = new SimpleLongProperty(prefPayload.getWithdrawalTxFeeInBytes());
@@ -164,6 +166,12 @@ public final class Preferences implements PersistedDataHost, BridgeAddressProvid
             persist();
         });
 
+        useDarkThemeProperty.addListener((ov) -> {
+            prefPayload.setUseDarkTheme(useDarkThemeProperty.get());
+            GlobalSettings.setUseDarkTheme(prefPayload.isUseDarkTheme());
+            persist();
+        });
+
         useStandbyModeProperty.addListener((ov) -> {
             prefPayload.setUseStandbyMode(useStandbyModeProperty.get());
             persist();
@@ -205,6 +213,7 @@ public final class Preferences implements PersistedDataHost, BridgeAddressProvid
             prefPayload = persisted;
             GlobalSettings.setLocale(new Locale(prefPayload.getUserLanguage(), prefPayload.getUserCountry().code));
             GlobalSettings.setUseAnimations(prefPayload.isUseAnimations());
+            GlobalSettings.setUseDarkTheme(prefPayload.isUseDarkTheme());
             preferredTradeCurrency = checkNotNull(prefPayload.getPreferredTradeCurrency(), "preferredTradeCurrency must not be null");
             setPreferredTradeCurrency(preferredTradeCurrency);
             setFiatCurrencies(prefPayload.getFiatCurrencies());
@@ -247,6 +256,7 @@ public final class Preferences implements PersistedDataHost, BridgeAddressProvid
 
         // set all properties
         useAnimationsProperty.set(prefPayload.isUseAnimations());
+        useDarkThemeProperty.set(prefPayload.isUseDarkTheme());
         useStandbyModeProperty.set(prefPayload.isUseStandbyMode());
         useCustomWithdrawalTxFeeProperty.set(prefPayload.isUseCustomWithdrawalTxFee());
         withdrawalTxFeeInBytesProperty.set(prefPayload.getWithdrawalTxFeeInBytes());
@@ -319,6 +329,10 @@ public final class Preferences implements PersistedDataHost, BridgeAddressProvid
 
     public void setUseAnimations(boolean useAnimations) {
         this.useAnimationsProperty.set(useAnimations);
+    }
+
+    public void setUseDarkTheme(boolean useDarkTheme) {
+        this.useDarkThemeProperty.set(useDarkTheme);
     }
 
     public void addFiatCurrency(FiatCurrency tradeCurrency) {
@@ -719,6 +733,8 @@ public final class Preferences implements PersistedDataHost, BridgeAddressProvid
         void setTacAccepted(boolean tacAccepted);
 
         void setUseAnimations(boolean useAnimations);
+
+        void setUseDarkTheme(boolean useDarkTheme);
 
         void setUserLanguage(@NotNull String userLanguageCode);
 
