@@ -1,25 +1,8 @@
 
 
-@font-face {
-    src: url("/fonts/IBMPlexSans-Regular.ttf");
-}
 
-@font-face {
-    src: url("/fonts/IBMPlexSans-Bold.ttf");
-}
-
-@font-face {
-    src: url("/fonts/IBMPlexSans-Medium.ttf");
-}
-
-@font-face {
-    src: url("/fonts/IBMPlexMono-Regular.ttf");
-}
-
-@font-face {
-    src: url("/fonts/IBMPlexSans-Light.ttf");
-}
-
+@import "_typography";
+@import "_base-colors";
 @import "_tables";
 @import "_icons";
 @import "_popups";
@@ -167,7 +150,7 @@
 
 #wizard-item-background-active {
     -fx-body-color: linear-gradient(to bottom, -bs-color-gray-0, -bs-color-gray-1);
-    -fx-outer-border: linear-gradient(to bottom, -bs-bg-blue1, -bs-bg-blue2);
+    -fx-outer-border: linear-gradient(to bottom, -bs-color-blue-1, -bs-color-blue-2);
     -fx-background-color: -fx-shadow-highlight-color,
     -fx-outer-border,
     -fx-inner-border,
@@ -178,7 +161,7 @@
 
 #wizard-item-background-completed {
     -fx-body-color: linear-gradient(to bottom, -bs-color-gray-1, -bs-color-gray-1);
-    -fx-outer-border: linear-gradient(to bottom, -bs-bg-green, -bs-bg-green2);
+    -fx-outer-border: linear-gradient(to bottom, -bs-bg-green, -bs-color-green-2);
     -fx-background-color: -fx-shadow-highlight-color,
     -fx-outer-border,
     -fx-inner-border,
@@ -213,7 +196,7 @@
 
 #account-settings-item-background-selected {
     -fx-body-color: linear-gradient(to bottom, -bs-color-gray-0, -bs-color-gray-1);
-    -fx-outer-border: linear-gradient(to bottom, -bs-bg-blue1, -bs-bg-blue2);
+    -fx-outer-border: linear-gradient(to bottom, -bs-color-blue-1, -bs-color-blue-2);
     -fx-background-color: -fx-shadow-highlight-color,
     -fx-outer-border,
     -fx-inner-border,
@@ -258,7 +241,7 @@
 }
 
 .trade-msg-state-stored{
-    -fx-text-fill: -bs-bg-blue4;
+    -fx-text-fill: -bs-color-blue-4;
 }
 
 .trade-msg-state-acknowledged {

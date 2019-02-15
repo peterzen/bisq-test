@@ -1,5 +1,6 @@
 
 @import "_variables.scss";
+@import "_base-colors";
 
 $text-color: #000000;
 $background-color: #ffffff;
@@ -54,18 +55,6 @@ $background-color-gray: $color-gray-1;
     -bs-footer-pane-text: $color-gray-11;
     -bs-footer-pane-line: $color-gray-4;
 
-    // Auxiliary colors
-    -bs-bg-green2: $color-green-3;
-    -bs-bg-green: $color-green-2;
-    -bs-turquoise: $color-blue-6;
-    -bs-bg-blue1: $color-blue-1;
-    -bs-bg-blue2: $color-blue-2;
-    -bs-bg-blue4: $color-blue-3;
-    -bs-blue-transparent: rgba($color-blue-5, 0.27);
-    -bs-blue: $color-blue-4;
-    -bs-yellow: $color-yellow-1;
-    -bs-yellow-light: $color-yellow-2;
-
     -bs-rd-font-balance: $color-gray-11;
     -bs-rd-font-dark-gray: $color-gray-10;
     -bs-rd-font-dark: $color-gray-10;
@@ -84,12 +73,8 @@ $background-color-gray: $color-gray-1;
     -bs-rd-message-bubble: $color-blue-6;
     -bs-toggle-selected: $color-gray-6;
 
-
     -bs-rd-tooltip-truncated: $text-color;
 
-    -bs-green-soft: lighten($color-primary, 60%);
-    -bs-red: $color-red-1;
-    -bs-red-soft: lighten($color-red-1, 60%);
     -bs-warning: $color-orange-2;
 
     -bs-buy: $color-primary-dark;
@@ -120,7 +105,4 @@ $background-color-gray: $color-gray-1;
     -fx-selection-bar: $color-green-1;
     -fx-selection-bar-non-focused: -fx-selection-bar;
     -fx-default-button: lighten($color-primary-dark, 95%);
-
-    -fx-font-size: 13;
-    -fx-font-family: "IBM Plex Sans";
 }

@@ -336,7 +336,7 @@ public class BisqApp extends Application implements UncaughtExceptionHandler {
         String themeCss = useDarkTheme ? "theme-dark.css" : "theme-light.css";
         String cssPath = "/bisq/desktop/styles/";
 
-//        String cssBaseDir = "/home/peter/Work/bisq/bisq/desktop/src/main/resources/styles/";
+//        String cssBaseDir = "/home/peter/Work/bisq/bisq/desktop/build/resources/main/bisq/desktop/styles/";
 //
 //        scene.getStylesheets().setAll(
 //                "file://" + cssBaseDir + themeCss,
