@@ -391,6 +391,11 @@
     -fx-padding: -3 0 0 0;
 }
 
+.jfx-badge.new .badge-pane {
+    -fx-pref-width: 30;
+}
+
+
 .jfx-toggle-button,
 .jfx-toggle-button:armed,
 .jfx-toggle-button:hover,
