@@ -318,8 +318,9 @@ configure(project(':desktop')) {
 
     // https://github.com/anbuck/gradle-compass
     compass {
-        cssDir = file("src/main/java/bisq/desktop/styles")
+        debugInfo = true
         sassDir = file("src/main/java/bisq/desktop/styles")
+        cssDir = file("build/resources/main/bisq/desktop")
     }
 
     test {
