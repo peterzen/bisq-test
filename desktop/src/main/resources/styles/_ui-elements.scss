@@ -924,3 +924,14 @@ textfield */
     -fx-background-insets: 10;
 }
 
+
+
+#address-text-field {
+    -fx-cursor: hand;
+    -fx-text-fill: -fx-accent;
+    -fx-prompt-text-fill: -bs-text-color;
+}
+
+#address-text-field:hover {
+    -fx-text-fill: -bs-text-color;
+}

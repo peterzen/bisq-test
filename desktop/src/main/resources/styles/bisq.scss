@@ -16,13 +16,14 @@
     src: url("/fonts/IBMPlexMono-Regular.ttf");
 }
 
-//@import "colors.scss";
-@import "tables";
-@import "icons";
-@import "popups";
-@import "ui-elements";
-@import "CandleStickChart";
-@import "images";
+@import "_tables";
+@import "_icons";
+@import "_popups";
+@import "_ui-elements";
+@import "_CandleStickChart";
+@import "_images";
+@import "_dao";
+@import "_market";
 
 /* Account */
 
@@ -143,23 +144,10 @@
 
 /* Offer */
 
-.percentage-label {
-    -fx-alignment: center;
-}
-
 .offer-separator {
     -fx-background: -bs-color-gray-6;
 }
 
-#address-text-field {
-    -fx-cursor: hand;
-    -fx-text-fill: -fx-accent;
-    -fx-prompt-text-fill: -bs-text-color;
-}
-
-#address-text-field:hover {
-    -fx-text-fill: -bs-text-color;
-}
 
 /* Account setup */
 #wizard-item-background-deactivated {
@@ -410,166 +398,6 @@
 
 /********************************************************************************************************************
  *                                                                                                                  *
- * Market overview                                                                                                  *
- *                                                                                                                  *
- ********************************************************************************************************************/
-
-#charts .chart-legend {
-    -fx-font-size: 1.077em;
-    -fx-alignment: center;
-}
-
-#charts .axis, #price-chart .axis, #volume-chart .axis {
-    -fx-tick-label-fill: -bs-rd-font-lighter;
-    -fx-tick-label-font-size: 0.769em;
-}
-
-#charts .chart-plot-background {
-    -fx-background-color: -bs-background-color;
-}
-
-#charts .default-color0.chart-area-symbol {
-    -fx-background-color: -bs-sell, -bs-background-color;
-}
-
-#charts .default-color1.chart-area-symbol {
-    -fx-background-color: -bs-buy, -bs-background-color;
-}
-
-#charts .default-color0.chart-series-area-line {
-    -fx-stroke: -bs-sell;
-}
-
-#charts .default-color1.chart-series-area-line {
-    -fx-stroke: -bs-buy;
-}
-
-#charts .default-color0.chart-series-area-fill {
-    -fx-fill: -bs-sell-transparent;
-}
-
-#charts .default-color1.chart-series-area-fill {
-    -fx-fill: -bs-buy-transparent;
-}
-
-#charts .axis-label {
-    -fx-font-size: 0.769em;
-    -fx-alignment: center-left;
-}
-/********************************************************************************************************************
- *                                                                                                                  *
- * Highlight buttons                                                                                                  *
- *                                                                                                                  *
- ********************************************************************************************************************/
-
-#buy-button-big {
-    -fx-font-size: 1em;
-    -fx-background-color: -bs-buy;
-    -fx-text-fill: -bs-background-color;
-}
-
-#buy-button {
-    -fx-background-color: -bs-buy;
-    -fx-text-fill: -bs-background-color;
-}
-
-#buy-button-big:hover, #buy-button:hover,
-#buy-button-big:focused, #buy-button:focused {
-    -fx-background-color: derive(-bs-buy, -10%);
-}
-
-#sell-button-big {
-    -fx-background-color: -bs-sell;
-    -fx-text-fill: -bs-background-color;
-    -fx-font-size: 1em;
-}
-
-#sell-button {
-    -fx-background-color: -bs-sell;
-    -fx-text-fill: -bs-background-color;
-}
-
-#sell-button-big:hover, #sell-button:hover,
-#sell-button-big:focused, #sell-button:focused {
-    -fx-background-color: derive(-bs-sell, -10%);
-}
-
-#sell-button-big.grey-style, #buy-button-big.grey-style,
-#sell-button.grey-style, #buy-button.grey-style {
-    -fx-background-color: -bs-color-gray-2;
-    -fx-text-fill: -bs-rd-font-dark-gray;
-}
-
-.action-button:disabled, #sell-button:disabled, #buy-button:disabled {
-    -fx-background-color: -bs-color-gray-0;
-    -fx-text-fill: -bs-rd-font-dark-gray;
-}
-
-#price-feed-combo {
-    -fx-background-color: none;
-}
-
-#price-feed-combo > .list-cell {
-    -fx-text-fill: -bs-text-color;
-    -fx-font-family: "IBM Plex Sans";
-}
-
-#invert-market-price {
-    -fx-text-fill: -bs-color-gray-11;
-}
-
-#popup-qr-code-info {
-    -fx-font-size: 0.846em;
-}
-
-#ident-num-label {
-    -fx-font-weight: bold;
-    -fx-alignment: center;
-    -fx-font-size: 0.769em;
-    -fx-text-fill: -bs-background-color;
-}
-
-#toggle-left {
-    -fx-border-radius: 4 0 0 4;
-    -fx-border-color: -bs-rd-separator-dark;
-    -fx-border-style: solid;
-    -fx-border-width: 0 1 0 0;
-    -fx-background-radius: 4 0 0 4;
-    -fx-background-color: -bs-background-color;
-    -fx-effect: dropshadow(gaussian, -bs-text-color-transparent, 4, 0, 0, 0, 2);
-}
-
-#toggle-center {
-    -fx-border-radius: 0;
-    -fx-border-color: -bs-rd-separator-dark;
-    -fx-border-style: solid;
-    -fx-border-width: 0 1 0 0;
-    -fx-border-insets: 0;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
-    -fx-background-color: -bs-background-color;
-    -fx-effect: dropshadow(gaussian, -bs-text-color-transparent, 4, 0, 0, 0, 2);
-}
-
-#toggle-center:selected, #toggle-left:selected, #toggle-right:selected {
-    -fx-text-fill: -bs-background-color;
-    -fx-background-color: -bs-toggle-selected;
-}
-
-#toggle-right {
-    -fx-border-radius: 0 4 4 0;
-    -fx-border-width: 0;
-    -fx-background-radius: 0 4 4 0;
-    -fx-background-color: -bs-background-color;
-    -fx-effect: dropshadow(gaussian, -bs-text-color-transparent, 4, 0, 0, 0, 2);
-}
-
-#toggle-left:hover, #toggle-right:hover, #toggle-center:hover {
-    -fx-background-color: -bs-toggle-selected;
-}
-
-/********************************************************************************************************************
- *                                                                                                                  *
  * Arbitration                                                                                                      *
  *                                                                                                                  *
  ********************************************************************************************************************/
@@ -593,105 +421,6 @@
     -fx-font-size: 0.846em;
 }
 
-/********************************************************************************************************************
- *                                                                                                                  *
- * DAO                                                                                                              *
- *                                                                                                                  *
- ********************************************************************************************************************/
-
-.dao-tx-type-trade-fee-icon,
-.dao-tx-type-trade-fee-icon:hover {
-    -fx-text-fill: #689f43;
-}
-
-.dao-tx-type-unverified-icon,
-.dao-tx-type-unverified-icon:hover {
-    -fx-text-fill: #ffac00;
-}
-
-.dao-tx-type-invalid-icon,
-.dao-tx-type-invalid-icon:hover {
-    -fx-text-fill: #ff4500;
-}
-
-.dao-tx-type-self-icon,
-.dao-tx-type-self-icon:hover {
-    -fx-text-fill: #818181;
-}
-
-.dao-tx-type-proposal-fee-icon,
-.dao-tx-type-proposal-fee-icon:hover {
-    -fx-text-fill: #6c8b3b;
-}
-
-.dao-tx-type-genesis-icon,
-.dao-tx-type-genesis-icon:hover {
-    -fx-text-fill: -fx-accent;
-}
-
-.dao-tx-type-received-funds-icon,
-.dao-tx-type-received-funds-icon:hover {
-    -fx-text-fill: -bs-green-soft;
-}
-
-.dao-tx-type-sent-funds-icon,
-.dao-tx-type-sent-funds-icon:hover {
-    -fx-text-fill: -bs-red-soft;
-}
-
-.dao-tx-type-vote-icon,
-.dao-tx-type-vote-icon:hover {
-    -fx-text-fill: #0a4576;
-}
-
-.dao-tx-type-vote-reveal-icon,
-.dao-tx-type-vote-reveal-icon:hover {
-    -fx-text-fill: #4AC5FF;
-}
-
-.dao-tx-type-issuance-icon,
-.dao-tx-type-issuance-icon:hover {
-    -fx-text-fill: #04a908;
-}
-
-.dao-tx-type-lockup-icon,
-.dao-tx-type-lockup-icon:hover {
-    -fx-text-fill: #203e7f;
-}
-
-.dao-tx-type-unlock-icon,
-.dao-tx-type-unlock-icon:hover {
-    -fx-text-fill: #438e6c;
-}
-
-.dao-accepted-icon {
-    -fx-text-fill: -bs-color-primary;
-}
-
-.dao-rejected-icon {
-    -fx-text-fill: -bs-rd-error-red;
-}
-
-.dao-ignored-icon {
-    -fx-text-fill: -bs-color-gray-4;
-}
-
-.compensation-root {
-    -fx-background-insets: 0, 0 0 0 0
-}
-
-.info-icon {
-    -fx-text-fill: -fx-accent;
-}
-
-.info-icon-button {
-    -fx-cursor: hand;
-    -fx-background-color: transparent;
-}
-
-.dao-remove-proposal-icon {
-    -fx-text-fill: -fx-accent;
-}
 
 /********************************************************************************************************************
  *                                                                                                                  *
@@ -700,7 +429,7 @@
  ********************************************************************************************************************/
 
 #notification-erase-button {
-    -fx-background-color: -bs-soft-red;
+    -fx-background-color: -bs-red-soft;
     -fx-text-fill: -bs-background-color;
 }
 

@@ -1,5 +1,5 @@
 
-@import "base-colors";
+@import "_variables.scss";
 
 $text-color: #000000;
 $background-color: #ffffff;
@@ -7,9 +7,13 @@ $background-color-gray: $color-gray-1;
 
 
 .root {
+    -bs-color-primary: $color-primary;
+    -bs-color-primary-dark: $color-primary-dark;
+
     -bs-text-color: $text-color;
     -bs-background-color: $background-color;
     -bs-background-gray: $background-color-gray;
+    -bs-color-gray: $brand-color-gray;
 
     // Chroma shades
     -bs-color-gray-11: $color-gray-11;
@@ -33,6 +37,7 @@ $background-color-gray: $color-gray-1;
     // Tab header
     -bs-rd-tab-border: $color-gray-1;
     -bs-tab-content-area: $background-color;
+    //-bs-viewport-background: blue;
 
     // Content pane
     -bs-color-gray-background: $color-gray-0;
@@ -43,7 +48,6 @@ $background-color-gray: $color-gray-1;
     -bs-scroll-pane-background: transparent;
     -bs-tab-content-area: transparent;
     -bs-viewport-background: transparent;
-
 
     // Footer pane
     -bs-footer-pane-background: $color-gray-4;
@@ -59,7 +63,8 @@ $background-color-gray: $color-gray-1;
     -bs-bg-blue4: $color-blue-3;
     -bs-blue-transparent: rgba($color-blue-5, 0.27);
     -bs-blue: $color-blue-4;
-
+    -bs-yellow: $color-yellow-1;
+    -bs-yellow-light: $color-yellow-2;
 
     -bs-rd-font-balance: $color-gray-11;
     -bs-rd-font-dark-gray: $color-gray-10;
@@ -79,11 +84,11 @@ $background-color-gray: $color-gray-1;
     -bs-rd-message-bubble: $color-blue-6;
     -bs-toggle-selected: $color-gray-6;
 
-    -bs-red: $color-red-1;
 
     -bs-rd-tooltip-truncated: $text-color;
 
     -bs-green-soft: lighten($color-primary, 60%);
+    -bs-red: $color-red-1;
     -bs-red-soft: lighten($color-red-1, 60%);
     -bs-warning: $color-orange-2;
 
