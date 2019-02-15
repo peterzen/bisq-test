@@ -334,21 +334,18 @@ public class BisqApp extends Application implements UncaughtExceptionHandler {
     private void loadSceneStyles(Scene scene, Injector injector) {
         Boolean useDarkTheme = injector.getInstance(Preferences.class).isUseDarkTheme();
         String themeCss = useDarkTheme ? "theme-dark.css" : "theme-light.css";
-        String cssPath = "/bisq/desktop/";
+        String cssPath = "/bisq/desktop/styles/";
 
-//        String cssBaseDir = "/home/peter/Work/bisq/bisq/desktop/src/main/java/bisq/desktop/styles/";
+//        String cssBaseDir = "/home/peter/Work/bisq/bisq/desktop/src/main/resources/styles/";
 //
 //        scene.getStylesheets().setAll(
 //                "file://" + cssBaseDir + themeCss,
-//                "file://" + cssBaseDir + "bisq.css",
-//                "file://" + cssBaseDir + "images.css",
-//                "file://" + cssBaseDir + "CandleStickChart.css");
+//                "file://" + cssBaseDir + "bisq.css");
 
         scene.getStylesheets().setAll(
                 cssPath + themeCss,
-                cssPath + "bisq.css",
-                cssPath + "images.css",
-                cssPath + "CandleStickChart.css");
+                cssPath + "bisq.css"
+        );
     }
 
     private void shutDownByUser() {

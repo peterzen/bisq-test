@@ -1,9 +1,9 @@
 
-@import "base-colors.scss";
+@import "base-colors";
 
-$text-color: $color-gray-2;
-$background-color: $color-gray-10;
-$background-color-gray: $color-gray-11;
+$text-color: #000000;
+$background-color: #ffffff;
+$background-color-gray: $color-gray-1;
 
 
 .root {
@@ -12,14 +12,14 @@ $background-color-gray: $color-gray-11;
     -bs-background-gray: $background-color-gray;
 
     // Chroma shades
-    -bs-color-gray-11: $color-gray-0;
-    -bs-color-gray-10: $color-gray-1;
-    -bs-color-gray-6:  $color-gray-2;
-    -bs-color-gray-4:  $color-gray-3;
-    -bs-color-gray-3:  $color-gray-4;
-    -bs-color-gray-2:  $color-gray-6;
-    -bs-color-gray-1:  $color-gray-10;
-    -bs-color-gray-0:  $color-gray-11;
+    -bs-color-gray-11: $color-gray-11;
+    -bs-color-gray-10: $color-gray-10;
+    -bs-color-gray-6:  $color-gray-6;
+    -bs-color-gray-4:  $color-gray-4;
+    -bs-color-gray-3:  $color-gray-3;
+    -bs-color-gray-2:  $color-gray-2;
+    -bs-color-gray-1:  $color-gray-1;
+    -bs-color-gray-0:  $color-gray-0;
 
     // Top nav colors
     -bs-rd-nav-selected: $color-primary;
@@ -27,19 +27,17 @@ $background-color-gray: $color-gray-11;
     -bs-rd-nav-background: $color-primary-dark;
     -bs-rd-nav-primary-background: $color-primary;
     -bs-rd-nav-primary-border: $color-primary-light;
-    -bs-rd-nav-border: $color-gray-10;
+    -bs-rd-nav-border: $color-gray-6;
     -bs-rd-nav-border-color: rgba($background-color, 0.31);
 
     // Tab header
     -bs-rd-tab-border: $color-gray-1;
-    -bs-tab-content-area: $color-gray-1;
-    //-bs-viewport-background: blue;
+    -bs-tab-content-area: $background-color;
 
     // Content pane
-    -bs-color-gray-background: $color-gray-10;
-    -bs-content-pane-bg-top: $color-gray-10;
-    -bs-content-pane-bg-bottom: $color-gray-10;
-
+    -bs-color-gray-background: $color-gray-0;
+    -bs-content-pane-bg-top: $color-gray-0;
+    -bs-content-pane-bg-bottom: $color-gray-2;
 
     // TODO Scrollbar on Settings
     -bs-scroll-pane-background: transparent;
@@ -48,11 +46,9 @@ $background-color-gray: $color-gray-11;
 
 
     // Footer pane
-    -bs-footer-pane-background: $color-gray-10;
-    -bs-footer-pane-text: $color-gray-1;
-    -bs-footer-pane-line: $color-gray-10;
-
-
+    -bs-footer-pane-background: $color-gray-4;
+    -bs-footer-pane-text: $color-gray-11;
+    -bs-footer-pane-line: $color-gray-4;
 
     // Auxiliary colors
     -bs-bg-green2: $color-green-3;
@@ -64,11 +60,12 @@ $background-color-gray: $color-gray-11;
     -bs-blue-transparent: rgba($color-blue-5, 0.27);
     -bs-blue: $color-blue-4;
 
-    -bs-rd-font-balance: $color-gray-3;
-    -bs-rd-font-dark-gray: $color-gray-4;
-    -bs-rd-font-dark: $color-gray-2;
-    -bs-rd-font-light: $color-gray-1;
-    -bs-rd-font-lighter: $color-gray-0;
+
+    -bs-rd-font-balance: $color-gray-11;
+    -bs-rd-font-dark-gray: $color-gray-10;
+    -bs-rd-font-dark: $color-gray-10;
+    -bs-rd-font-light: $color-gray-6;
+    -bs-rd-font-lighter: $color-gray-4;
 
     -bs-rd-font-confirmation-label: $color-gray-6;
     -bs-rd-font-balance-label: $color-gray-6;
@@ -76,8 +73,8 @@ $background-color-gray: $color-gray-11;
     -bs-text-color-transparent-dark: rgba($color-gray-11, 0.54);
     -bs-text-color-transparent: rgba($color-gray-11, 0.2);
     -bs-color-gray-line: $color-gray-6;
-    -bs-rd-separator: $color-gray-10;
-    -bs-rd-separator-dark: darken($color-gray-10, 10%);
+    -bs-rd-separator: $color-gray-2;
+    -bs-rd-separator-dark: darken($color-gray-2, 10%);
     -bs-rd-error-red: $color-red-1;
     -bs-rd-message-bubble: $color-blue-6;
     -bs-toggle-selected: $color-gray-6;
@@ -111,7 +108,7 @@ $background-color-gray: $color-gray-11;
 
     // JavaFX style overrides
     -fx-accent: $color-primary-dark;
-    -fx-box-border: $color-gray-11;
+    -fx-box-border: $color-gray-1;
 
     -fx-focus-color: $color-primary-dark;
     -fx-faint-focus-color: rgba($color-blue-5, 0.13);
